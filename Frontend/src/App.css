@@ -1,0 +1,47 @@
+:root {
+  --primary-blue: #2D8CFF;
+  --hover-blue: #2470CC;
+
+  --light-bg: #F5F5F7;
+  --light-layer: #FFFFFF;
+  --light-soft: #EAF3FF;
+  --light-border: #D5E8FF;
+  --light-text: #00031F;
+
+  --dark-bg: #212121;
+  --dark-sidebar: #171717;
+  --dark-layer: #323232;
+  --dark-text: #ECECEC;
+}
+
+* {
+  font-family: "Segoe UI", Roboto, system-ui;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+}
+
+/* DARK */
+.app.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* LIGHT */
+.app.light {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+  }
+}

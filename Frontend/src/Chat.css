@@ -1,0 +1,79 @@
+
+
+ .chats {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.userDiv {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.gptDiv {
+  text-align: left;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.userMessage {
+  background-color: #323232;
+  padding: 10px 16px;
+  border-radius: 14px;
+  max-width: 75%;
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;   /* wrap long lines */
+  word-break: break-word; /* break long tokens */
+}
+
+code {
+  word-break: break-word;
+}
+
+.hljs {
+  border-radius: 12px !important;
+}
+
+.newChatCenter {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.newChatCenter h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.newChatCenter p {
+  font-size: 14px;
+  color: #b4b4b4;
+}
+
+
+/* LIGHT MODE CHAT */
+.app.light .userMessage {
+  background-color: #ffffff;
+  color: #000319d7;
+  font-weight: 450;
+}
+
+.app.light .gptDiv {
+  color: #00031F;
+}
+
+.app.light .newChatCenter p {
+  color: #555;
+}
