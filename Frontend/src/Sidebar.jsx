@@ -20,7 +20,8 @@ function Sidebar() {
 
   const getAllThreads = async () => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/thread`);
+      // const response = await fetch(`${import.meta.env.VITE_API_URL}/api/thread`);
+      const response = await fetch(`http://localhost:5000/api/thread`);
       const res = await response.json();
 
       const filteredData = res.map((thread) => ({
@@ -52,7 +53,8 @@ function Sidebar() {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/thread/${newThreadId}`
+        // `${import.meta.env.VITE_API_URL}/api/thread/${newThreadId}`
+        `http://localhost:5000/api/thread/${newThreadId}`
       );
       const res = await response.json();
 
@@ -68,7 +70,8 @@ function Sidebar() {
   const deleteThread = async (threadId) => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/thread/${threadId}`,
+        // `${import.meta.env.VITE_API_URL}/api/thread/${threadId}`,
+        `http://localhost:5000/api/thread/${threadId}`,
         { method: "DELETE" }
       );
       const res = await response.json();
