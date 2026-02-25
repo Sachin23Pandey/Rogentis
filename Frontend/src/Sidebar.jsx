@@ -25,11 +25,20 @@ function Sidebar() {
       // const response = await fetch(`https://rogentis-backend.onrender.com/api/thread`);
       const res = await response.json();
 
-      const filteredData = res.map((thread) => ({
-        threadId: thread.threadId,
-        title: thread.title,
-      }));
+      // const filteredData = res.map((thread) => ({
+      //   threadId: thread.threadId,
+      //   title: thread.title,
+      // }));
 
+      if (!Array.isArray(res)) {
+  console.error("Expected array but got:", res);
+  return;
+}
+
+const filteredData = res.map((thread) => ({
+  threadId: thread.threadId,
+  title: thread.title,
+}));
       setAllThreads(filteredData);
     } catch (err) {
       console.log(err);
