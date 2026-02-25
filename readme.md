@@ -2,7 +2,7 @@
 
 ## 🌐 Live Demo
 
-👉 https://your-deployed-link.com
+👉 https://rogentis.onrender.com/
 
 # 🚀  Rogentis     
 
