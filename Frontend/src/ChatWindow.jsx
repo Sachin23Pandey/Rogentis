@@ -43,7 +43,7 @@ function ChatWindow() {
     };
 
     try {
-      const response = await fetch("https://rogentis.onrender.com//api/chat", options);
+      const response = await fetch("https://rogentis.onrender.com/api/chat", options);
       const res = await response.json();
       setReply(res.reply);
     } catch (err) {
