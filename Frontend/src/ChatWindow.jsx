@@ -18,8 +18,8 @@ function ChatWindow() {
     setNewChat,
     theme,
     setTheme,
-    mobileSidebarOpen,          // ✅ NEW
-    setMobileSidebarOpen,       // ✅ NEW
+    mobileSidebarOpen,          
+    setMobileSidebarOpen,       
   } = useContext(MyContext);
 
   const [loading, setLoading] = useState(false);
@@ -43,7 +43,7 @@ function ChatWindow() {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/chat", options);
+      const response = await fetch("https://rogentis.onrender.com//api/chat", options);
       const res = await response.json();
       setReply(res.reply);
     } catch (err) {
