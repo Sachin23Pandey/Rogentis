@@ -22,6 +22,7 @@ function Sidebar() {
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/thread`);
       // const response = await fetch(`http://localhost:5000/api/thread`);
+      // const response = await fetch(`https://rogentis-backend.onrender.com/api/thread`);
       const res = await response.json();
 
       const filteredData = res.map((thread) => ({
@@ -55,6 +56,7 @@ function Sidebar() {
       const response = await fetch(
         `${import.meta.env.VITE_API_URL}/api/thread/${newThreadId}`
         // `http://localhost:5000/api/thread/${newThreadId}`
+        // `https://rogentis-backend.onrender.com/api/thread/${newThreadId}`
       );
       const res = await response.json();
 
@@ -72,6 +74,7 @@ function Sidebar() {
       const response = await fetch(
         `${import.meta.env.VITE_API_URL}/api/thread/${threadId}`,
         // `http://localhost:5000/api/thread/${threadId}`,
+        // `https://rogentis-backend.onrender.com/api/thread/${threadId}`,
         { method: "DELETE" }
       );
       const res = await response.json();

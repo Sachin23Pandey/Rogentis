@@ -45,6 +45,7 @@ function ChatWindow() {
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/chat`, options);
       // const response = await fetch(`http://localhost:5000/api/chat`, options);
+      // const response = await fetch(`https://rogentis-backend.onrender.com/api/chat`, options);
       const res = await response.json();
       setReply(res.reply);
     } catch (err) {
